@@ -17,13 +17,25 @@ function switchTheme(e) {
 
 function updateLogo(theme) {
   const companyLogo = document.querySelector("#oxide-logo");
-  companyLogo.src = theme === "dark" ? "/images/logo.png" : "/images/logo.dark.png";
+  companyLogo.src =
+    theme === "dark" ? "/images/logo.png" : "/images/logo.dark.png";
 }
 
 const currentTheme = localStorage.getItem("theme") || "dark";
 
 document.documentElement.setAttribute("data-theme", currentTheme);
-updateLogo(currentTheme)
+updateLogo(currentTheme);
 if (currentTheme === "dark") {
   themeToggle.checked = true;
+}
+
+const activeStyleSheet = document.getElementById("stylesheet");
+const c64Toggle = document.querySelector(".footer-piece span");
+c64Toggle.style.cursor = "pointer";
+c64Toggle.onclick = function() {
+  setStylesheet(`/theme/${activeStyleSheet.href.includes('c64') ? 'default' : 'c64'}/custom.css`);
+};
+
+function setStylesheet(styleSheet) {
+  activeStyleSheet.href = styleSheet;
 }

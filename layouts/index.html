@@ -37,7 +37,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css" />
+    <link id="stylesheet" rel="stylesheet" href="/theme/default/custom.css" />
     <script src="/js/lib/modernizr-2.6.2.min.js"></script>
 </head>
 
@@ -47,7 +47,7 @@
         <logo>
             <div class="logo-link" title="Oxide Computer Company Website">
                 <div class="logo" role="img" aria-label="Oxide Computer Company logo">
-                    <a href="https://oxide.computer/" target="_blank">
+                    <a href="https://oxide.computer/" target="_blank" tabindex="1">
                         <img src="/images/logo.png" alt="Oxide Computer Company logo" id="oxide-logo">
                     </a>
                 </div>
@@ -57,9 +57,9 @@
             <h3>{{.Site.Title}}</h3>
             <h1>{{.Site.Params.Headline}}</h1>
             <p class="lead">{{.Site.Params.Description}}</p>
-            <p>Interested? Send a PR with any improvement to <a
-                    href="https://github.com/oxidecomputer/design.oxide.computer" target="_blank">this repo on
-                    GitHub</a> or <a href="https://oxide.computer/careers/product-engineers/" target="_blank">apply
+            <p class="content">Interested? Send a PR with any improvement to <a
+                    href="https://github.com/oxidecomputer/design.oxide.computer" target="_blank" tabindex="2">this repo on
+                    GitHub</a> or <a href="https://oxide.computer/careers/product-engineers/" target="_blank" tabindex="3">apply
                     through our careers page</a>.
         </main>
         <section id="theme-toggle-container">
@@ -70,13 +70,13 @@
         </section>
         <footer>
             <p class="footer-piece footer-piece--separate">
-                Created by
-                <a href="https://github.com/oxidecomputer/design.oxide.computer/graphs/contributors" target="_blank"
+                <span>Created</span> by
+                <a href="https://github.com/oxidecomputer/design.oxide.computer/graphs/contributors" tabindex="5" target="_blank"
                     id="contributors"
                     title="Contributors to the GitHub repository design.oxide.computer by the oxidecomputer organization">0</a>
                 contributors
                 on
-                <a href="https://github.com/oxidecomputer/design.oxide.computer/" target="_blank"
+                <a href="https://github.com/oxidecomputer/design.oxide.computer/" tabindex="6" target="_blank"
                     title="GitHub repository design.oxide.computer by the oxidecomputer organization">GitHub</a>.
             </p>
         </footer>
